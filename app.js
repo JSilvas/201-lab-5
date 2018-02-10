@@ -11,10 +11,10 @@ Test this function by hand in the console to get it working, and when you think 
 For TODO item, be sure to change it to say DONE when you have successfully completed the task*/
 
 // TODO: Write your code here
-function sum(a,b){ //eslint-disable-line
-  var theSum = a + b;
-  var message = 'The sum of ' + a + ' and ' + b + ' is ' + theSum + '.';
-  return [theSum, message];
+function sum(a,b,c){ //eslint-disable-line
+  var sum2 = a + b;
+  var message = 'The sum of ' + a + ' and ' + b + ' is ' + sum2 + '.';
+  return [sum2, message];
 }
 
 // TODO: Here is the test for sum(); uncomment it to run it
@@ -32,9 +32,9 @@ Test this function by hand in the console to get it working, and when you think 
 
 // TODO: Write your code here
 function multiply(a,b) { //eslint-disable-line
-  var theProduct = a * b;
-  var message = 'The product of ' + a + ' and ' + b + ' is ' + theProduct + '.';
-  return [theProduct, message];
+  var product2 = a * b;
+  var message = 'The product of ' + a + ' and ' + b + ' is ' + product2 + '.';
+  return [product2, message];
 }
 
 // TODO: Here is the test for multiply(); uncomment it to run it
@@ -55,11 +55,17 @@ Test this function by hand in the console to get it working, and when you think 
 
 // TODO: Write your code here
 function sumAndMultiply(a,b,c){ //eslint-disable-line
-
+  var sumFun = sum(a,b)[0];
+  var multFun = multiply(a,b)[0];
+  var sum3 = sum(sumFun,c)[0];
+  var mult3 = multiply(multFun,c)[0];
+  var sumMessage = a + ' and ' + b + ' and ' + c + ' sum to ' + sum3 + '.';
+  var multMessage = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + mult3 + '.';
+  return [sumFun, multFun, sumMessage, multMessage];
 }
 
 // TODO: Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
